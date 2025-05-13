@@ -99,3 +99,4 @@ GAUTH_CALLBACK_URL = google_auth_callback_url
 └── README.md             # Documentation
 ```
 
+* Future enhancements:  For scaling and efficient purpose of application, tech like rabbitMQ, kafka can be implemented.
