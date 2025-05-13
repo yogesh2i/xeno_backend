@@ -42,7 +42,7 @@ A backend system for managing campaigns, sending personalized messages to custom
    ```bash
     npm install
     ```
-## Environment Varaibles
+## [Environment Varaibles]
 
 3. Setup Environment Variables
 ```bash
@@ -62,12 +62,12 @@ GAUTH_CALLBACK_URL = google_auth_callback_url
     node index.js
     ```
 
-## API Endpoints
+## [API Endpoints]
 
 * checkout api-docs here -
  https://xeno-backend-129m.onrender.com/api-docs/#/
 
-## Technologies Used
+## [Technologies Used]
 
 * Node.js: Backend runtime environment.
 * Express.js: Web framework for building APIs.
@@ -78,8 +78,8 @@ GAUTH_CALLBACK_URL = google_auth_callback_url
 * swagger-autogen: Automatic Swagger documentation generation.
 * Gemini: For generating auto ai-based tags
 
-## Project Structure
-
+## [Project Structure]
+```
 ├── models/               # Mongoose models
 │   ├── Customer.js
 │   ├── Order.js
@@ -97,5 +97,5 @@ GAUTH_CALLBACK_URL = google_auth_callback_url
 ├── .env                  # Environment variables
 ├── [package.json]         # Project metadata and dependencies
 └── README.md             # Documentation
-
+```
 
