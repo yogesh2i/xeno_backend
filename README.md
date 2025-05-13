@@ -28,7 +28,7 @@ A backend system for managing campaigns, sending personalized messages to custom
 
 ---
 
-## Installation
+## [Installation]
 
 1. Clone the repository:
     ```bash
@@ -45,7 +45,7 @@ A backend system for managing campaigns, sending personalized messages to custom
 ## Environment Varaibles
 
 3. Setup Environment Variables
-    ```bash
+```bash
 SERVER_URL = http://localhost:5000/api
 JWT_SECRET = your_jwt_secret
 PORT = 5000
@@ -55,10 +55,10 @@ GAUTH_CLIENT_ID = google_auth_client_id
 GAUTH_CLIENT_SECRET = google_auth_secret
 GAUTH_CALLBACK_URL = google_auth_callback_url
 
-    ```
+```
 
 4. Start server
-  ```bash
+    ```bash
     node index.js
     ```
 
