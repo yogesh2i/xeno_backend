@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-
+//15 minutes 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, 
   max: 100,
@@ -51,5 +51,5 @@ app.use("/api/ai", aiRoutes);
 
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on ${PORT}`);
 });

@@ -3,7 +3,10 @@ const router = express.Router();
 const Order = require("../models/Order");
 const Customer = require("../models/Customer");
 
-
+/*
+* Post /api/orders
+* Add a new order
+*/
 router.post("/", async (req, res) => {
   const { customerId, orderAmount } = req.body;
 
@@ -26,7 +29,10 @@ router.post("/", async (req, res) => {
   }
 });
 
-
+/*
+Get /api/orders
+get all orders
+*/
 router.get("/", async (req, res) => {
   try {
     const orders = await Order.find().populate("customerId", "name location");
