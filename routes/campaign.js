@@ -78,23 +78,24 @@ router.post("/", async (req, res) => {
     const failed = [];
 
     for (const customer of customers) {
-      const isSuccess = Math.random() < 0.9; // 90% success rate
-      const message = `Hi ${customer.name}, here’s 10% off on your next order!`;
-
+      const isSuccess = Math.random() < 0.7; // 70% success rate
+      
       if (isSuccess) {
-        sent.push(customer._id);
+        sent.push({
+          customerId: customer._id,
+          message: `Hi ${customer.name}, here’s 10% off on your next order!`
+        })
       } else {
         failed.push(customer._id);
       }
 
-      // Simulate  dummy vendor API and logging
-      await axios.post(`${process.env.SERVER_URL}/delivery-receipt`, {
-        customerId: customer._id,
-        campaignName: segmentName, 
-        status: isSuccess ? "SENT" : "FAILED",
-        message,
-      });
     }
+    // Simulate  dummy vendor API and logging
+    await axios.post(`${process.env.SERVER_URL}/delivery-receipt`, {
+      campaignName: segmentName, 
+      sent,
+      failed,
+    });
     const campaign = {
         name,
         segmentName,
